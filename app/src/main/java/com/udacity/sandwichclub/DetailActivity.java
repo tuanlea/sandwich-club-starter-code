@@ -59,5 +59,16 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
+        TextView akaTV = findViewById(R.id.also_known_tv);
+        akaTV.setText(sandwich.getAlsoKnownAs().toString());
+
+        TextView ingredientsTV = findViewById(R.id.ingredients_tv);
+        ingredientsTV.setText(sandwich.getIngredients().toString());
+
+        TextView originTV = findViewById(R.id.origin_tv);
+        originTV.setText(sandwich.getPlaceOfOrigin());
+
+        TextView descriptionTV = findViewById(R.id.description_tv);
+        descriptionTV.setText(sandwich.getDescription());
     }
 }
